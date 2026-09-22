@@ -1,0 +1,113 @@
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <!-- ===== HOME (start destination) ===== -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="id.temenpulang.app.fragment.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_home_to_perjalanan"
+            app:destination="@id/perjalananFragment" />
+
+        <!-- Dipakai tombol "Lanjutkan Perjalanan" saat ada perjalanan aktif -->
+        <action
+            android:id="@+id/action_home_to_tracking"
+            app:destination="@id/trackingFragment" />
+
+        <action
+            android:id="@+id/action_home_to_riwayat"
+            app:destination="@id/riwayatFragment" />
+
+        <action
+            android:id="@+id/action_home_to_profil"
+            app:destination="@id/profilFragment" />
+
+        <!-- Dipakai kartu "Perjalanan Terakhir" -->
+        <action
+            android:id="@+id/action_home_to_detail"
+            app:destination="@id/detailPerjalananFragment" />
+    </fragment>
+
+    <!-- ===== PERJALANAN (form mulai perjalanan) ===== -->
+    <fragment
+        android:id="@+id/perjalananFragment"
+        android:name="id.temenpulang.app.fragment.PerjalananFragment"
+        android:label="@string/perjalanan_judul"
+        tools:layout="@layout/fragment_perjalanan">
+
+        <!-- popUpTo Home: form dihapus dari back stack, jadi tombol Back dari Tracking kembali ke Home -->
+        <action
+            android:id="@+id/action_perjalanan_to_tracking"
+            app:destination="@id/trackingFragment"
+            app:popUpTo="@id/homeFragment" />
+    </fragment>
+
+    <!-- ===== TRACKING ===== -->
+    <fragment
+        android:id="@+id/trackingFragment"
+        android:name="id.temenpulang.app.fragment.TrackingFragment"
+        android:label="@string/tracking_judul"
+        tools:layout="@layout/fragment_tracking">
+
+        <argument
+            android:name="namaPerjalanan"
+            app:argType="string" />
+        <argument
+            android:name="tujuan"
+            app:argType="string" />
+        <argument
+            android:name="catatan"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_tracking_to_detail"
+            app:destination="@id/detailPerjalananFragment"
+            app:popUpTo="@id/homeFragment" />
+    </fragment>
+
+    <!-- ===== RIWAYAT ===== -->
+    <fragment
+        android:id="@+id/riwayatFragment"
+        android:name="id.temenpulang.app.fragment.RiwayatFragment"
+        android:label="@string/menu_riwayat"
+        tools:layout="@layout/fragment_riwayat">
+
+        <action
+            android:id="@+id/action_riwayat_to_detail"
+            app:destination="@id/detailPerjalananFragment" />
+    </fragment>
+
+    <!-- ===== DETAIL PERJALANAN ===== -->
+    <fragment
+        android:id="@+id/detailPerjalananFragment"
+        android:name="id.temenpulang.app.fragment.DetailPerjalananFragment"
+        android:label="@string/detail_judul"
+        tools:layout="@layout/fragment_detail_perjalanan">
+
+        <argument
+            android:name="perjalananId"
+            app:argType="integer" />
+
+        <action
+            android:id="@+id/action_detail_to_riwayat"
+            app:destination="@id/riwayatFragment"
+            app:popUpTo="@id/homeFragment" />
+    </fragment>
+
+    <!-- ===== PROFIL ===== -->
+    <fragment
+        android:id="@+id/profilFragment"
+        android:name="id.temenpulang.app.fragment.ProfilFragment"
+        android:label="@string/menu_profil"
+        tools:layout="@layout/fragment_profil" />
+
+</navigation>
+```

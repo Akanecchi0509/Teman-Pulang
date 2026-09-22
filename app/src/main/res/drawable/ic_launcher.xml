@@ -1,0 +1,25 @@
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+
+    <!-- Latar persegi membulat -->
+    <path
+        android:fillColor="#5C6BC0"
+        android:pathData="M20,0h56a20,20 0 0 1 20,20v56a20,20 0 0 1 -20,20h-56a20,20 0 0 1 -20,-20v-56a20,20 0 0 1 20,-20z" />
+
+    <!-- Ikon rumah (pulang) di tengah -->
+    <group
+        android:scaleX="2.4"
+        android:scaleY="2.4"
+        android:translateX="19.2"
+        android:translateY="19.2">
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M10,20v-6h4v6h5v-8h3L12,3 2,12h3v8z" />
+    </group>
+</vector>
+```

@@ -1,0 +1,162 @@
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header: sapaan + tombol profil -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_greeting"
+                    android:textAppearance="@style/TextAppearance.TemenPulang.Headline" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/home_subtitle"
+                    android:textAppearance="@style/TextAppearance.TemenPulang.Body" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/button_profil"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_icon_circle"
+                android:contentDescription="@string/cd_profil"
+                android:padding="12dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_person"
+                app:tint="@color/tp_primary" />
+        </LinearLayout>
+
+        <!-- Kartu status perjalanan -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_status"
+            style="@style/Widget.TemenPulang.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:cardBackgroundColor="@color/tp_primary"
+            app:strokeWidth="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_location"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/text_status_judul"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/home_status_kosong_judul"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_status_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/home_status_kosong_detail"
+                    android:textColor="@color/tp_primary_light"
+                    android:textSize="14sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_mulai"
+                    style="@style/Widget.TemenPulang.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/home_button_mulai"
+                    android:textColor="@color/tp_primary_dark"
+                    app:backgroundTint="@color/white" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Judul bagian: Perjalanan Terakhir -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/home_terakhir_judul"
+                android:textAppearance="@style/TextAppearance.TemenPulang.Title" />
+
+            <TextView
+                android:id="@+id/text_lihat_semua"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:padding="8dp"
+                android:text="@string/home_lihat_semua"
+                android:textColor="@color/tp_primary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Ringkasan perjalanan terakhir: memakai ulang layout item_perjalanan -->
+        <include
+            android:id="@+id/item_terakhir"
+            layout="@layout/item_perjalanan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Tampil jika belum ada perjalanan yang selesai -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_terakhir_kosong"
+            style="@style/Widget.TemenPulang.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="24dp"
+                android:text="@string/home_terakhir_kosong"
+                android:textAppearance="@style/TextAppearance.TemenPulang.Body" />
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>
+```

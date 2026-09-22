@@ -1,0 +1,119 @@
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/riwayat_judul"
+            android:textAppearance="@style/TextAppearance.TemenPulang.Headline" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/riwayat_subjudul"
+            android:textAppearance="@style/TextAppearance.TemenPulang.Body" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_riwayat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:padding="20dp"
+            tools:listitem="@layout/item_perjalanan" />
+
+        <TextView
+            android:id="@+id/text_kosong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="32dp"
+            android:text="@string/riwayat_kosong"
+            android:textAppearance="@style/TextAppearance.TemenPulang.Body"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>
+```
+
+**Fungsi file:** Layout Riwayat: judul, RecyclerView, dan teks kosong.
+
+NAMA FILE:  
+`app/src/main/java/id/temenpulang/app/adapter/PerjalananAdapter.kt`
+
+```kotlin
+package id.temenpulang.app.adapter
+
+import android.annotation.SuppressLint
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
+import id.temenpulang.app.databinding.ItemPerjalananBinding
+import id.temenpulang.app.model.Perjalanan
+import id.temenpulang.app.util.PerjalananUi
+
+/**
+ * Adapter menghubungkan daftar data Perjalanan dengan RecyclerView.
+ *
+ * Alurnya:
+ * RecyclerView -> meminta Adapter membuat ViewHolder (onCreateViewHolder)
+ *              -> ViewHolder memegang layout item_perjalanan.xml
+ *              -> Adapter mengisi ViewHolder dengan data (onBindViewHolder)
+ */
+class PerjalananAdapter(
+    private val onItemClick: (Perjalanan) -> Unit
+) : RecyclerView.Adapter<PerjalananAdapter.PerjalananViewHolder>() {
+
+    private val daftar = mutableListOf<Perjalanan>()
+
+    /** Mengganti seluruh isi daftar lalu memberi tahu RecyclerView agar digambar ulang. */
+    @SuppressLint("NotifyDataSetChanged")
+    fun setData(dataBaru: List<Perjalanan>) {
+        daftar.clear()
+        daftar.addAll(dataBaru)
+        notifyDataSetChanged()
+    }
+
+    /** ViewHolder: memegang satu baris (item_perjalanan.xml) dan mengisinya dengan data. */
+    inner class PerjalananViewHolder(
+        private val binding: ItemPerjalananBinding
+    ) : RecyclerView.ViewHolder(binding.root) {
+
+        fun bind(perjalanan: Perjalanan) {
+            PerjalananUi.tampilkanItem(binding, perjalanan)
+            binding.root.setOnClickListener { onItemClick(perjalanan) }
+        }
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PerjalananViewHolder {
+        val binding = ItemPerjalananBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return PerjalananViewHolder(binding)
+    }
+
+    override fun onBindViewHolder(holder: PerjalananViewHolder, position: Int) {
+        holder.bind(daftar[position])
+    }
+
+    override fun getItemCount(): Int = daftar.size
+}
+```

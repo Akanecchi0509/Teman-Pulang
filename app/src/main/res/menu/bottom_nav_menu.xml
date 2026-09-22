@@ -1,0 +1,26 @@
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    PENTING: android:id setiap item HARUS sama dengan android:id destination
+    di nav_graph.xml. Dengan begitu NavigationUI otomatis tahu item mana
+    membuka Fragment mana, tanpa if/else.
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_home"
+        android:title="@string/menu_home" />
+
+    <item
+        android:id="@+id/riwayatFragment"
+        android:icon="@drawable/ic_history"
+        android:title="@string/menu_riwayat" />
+
+    <item
+        android:id="@+id/profilFragment"
+        android:icon="@drawable/ic_person"
+        android:title="@string/menu_profil" />
+
+</menu>
+```

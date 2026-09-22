@@ -1,0 +1,207 @@
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profil_judul"
+            android:textAppearance="@style/TextAppearance.TemenPulang.Headline" />
+
+        <!-- Foto profil (placeholder), nama, email -->
+        <ImageView
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/bg_icon_circle"
+            android:contentDescription="@string/cd_avatar"
+            android:padding="22dp"
+            android:src="@drawable/ic_person"
+            app:tint="@color/tp_primary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="14dp"
+            android:text="@string/profil_nama"
+            android:textAppearance="@style/TextAppearance.TemenPulang.Title" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="2dp"
+            android:text="@string/profil_email"
+            android:textAppearance="@style/TextAppearance.TemenPulang.Body" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="@string/profil_catatan_dummy"
+            android:textAppearance="@style/TextAppearance.TemenPulang.Label" />
+
+        <!-- Section: Informasi Pengguna -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/profil_section_info"
+            android:textAppearance="@style/TextAppearance.TemenPulang.Title" />
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.TemenPulang.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profil_label_nama"
+                    android:textAppearance="@style/TextAppearance.TemenPulang.Label" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="14dp"
+                    android:text="@string/profil_nama"
+                    android:textAppearance="@style/TextAppearance.TemenPulang.Value" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profil_label_email"
+                    android:textAppearance="@style/TextAppearance.TemenPulang.Label" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="14dp"
+                    android:text="@string/profil_email"
+                    android:textAppearance="@style/TextAppearance.TemenPulang.Value" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profil_label_akun"
+                    android:textAppearance="@style/TextAppearance.TemenPulang.Label" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/profil_akun_nilai"
+                    android:textAppearance="@style/TextAppearance.TemenPulang.Value" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Section: Pengaturan -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/profil_section_pengaturan"
+            android:textAppearance="@style/TextAppearance.TemenPulang.Title" />
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.TemenPulang.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profil_notifikasi"
+                    android:textAppearance="@style/TextAppearance.TemenPulang.Label" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="14dp"
+                    android:text="@string/profil_notifikasi_nilai"
+                    android:textAppearance="@style/TextAppearance.TemenPulang.Value" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profil_bahasa"
+                    android:textAppearance="@style/TextAppearance.TemenPulang.Label" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/profil_bahasa_nilai"
+                    android:textAppearance="@style/TextAppearance.TemenPulang.Value" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Section: Tentang Aplikasi -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/profil_section_tentang"
+            android:textAppearance="@style/TextAppearance.TemenPulang.Title" />
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.TemenPulang.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profil_tentang_versi"
+                    android:textAppearance="@style/TextAppearance.TemenPulang.Value" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/profil_tentang_deskripsi"
+                    android:textAppearance="@style/TextAppearance.TemenPulang.Body" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>
+```

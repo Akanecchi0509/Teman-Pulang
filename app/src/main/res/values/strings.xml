@@ -1,0 +1,109 @@
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TemenPulang</string>
+
+    <!-- Bottom navigation -->
+    <string name="menu_home">Home</string>
+    <string name="menu_riwayat">Riwayat</string>
+    <string name="menu_profil">Profil</string>
+
+    <!-- Umum -->
+    <string name="cd_kembali">Kembali</string>
+    <string name="cd_profil">Buka profil</string>
+    <string name="cd_avatar">Foto profil</string>
+    <string name="nilai_kosong">-</string>
+    <string name="label_nama_perjalanan">Nama perjalanan</string>
+    <string name="label_tujuan">Tujuan</string>
+    <string name="label_status">Status</string>
+    <string name="label_catatan">Catatan</string>
+    <string name="label_latitude">Latitude</string>
+    <string name="label_longitude">Longitude</string>
+    <string name="item_tujuan_format">Tujuan: %1$s</string>
+
+    <!-- Home -->
+    <string name="home_greeting">Halo, Teman!</string>
+    <string name="home_subtitle">Siap pulang dengan lebih tenang?</string>
+    <string name="home_status_kosong_judul">Belum ada perjalanan aktif</string>
+    <string name="home_status_kosong_detail">Mulai perjalananmu dan lihat lokasi terkini selama di jalan.</string>
+    <string name="home_status_aktif_judul">Perjalanan sedang berlangsung</string>
+    <string name="home_status_aktif_detail">%1$s → %2$s</string>
+    <string name="home_button_mulai">Mulai Perjalanan</string>
+    <string name="home_button_lanjut">Lanjutkan Perjalanan</string>
+    <string name="home_terakhir_judul">Perjalanan Terakhir</string>
+    <string name="home_lihat_semua">Lihat Semua</string>
+    <string name="home_terakhir_kosong">Belum ada perjalanan yang selesai.</string>
+
+    <!-- Perjalanan (form) -->
+    <string name="perjalanan_judul">Mulai Perjalanan</string>
+    <string name="perjalanan_subjudul">Isi detail perjalananmu sebelum berangkat.</string>
+    <string name="hint_nama">Nama perjalanan</string>
+    <string name="placeholder_nama">Contoh: Pulang Kuliah</string>
+    <string name="hint_tujuan">Tujuan</string>
+    <string name="placeholder_tujuan">Contoh: Rumah</string>
+    <string name="hint_catatan">Catatan (opsional)</string>
+    <string name="placeholder_catatan">Contoh: Jangan lupa beli makanan</string>
+    <string name="perjalanan_info_izin">Saat perjalanan dimulai, TemenPulang akan meminta izin lokasi. Lokasi hanya dibaca dari perangkatmu dan ditampilkan di dalam aplikasi ini.</string>
+    <string name="perjalanan_button_mulai">Mulai Sekarang</string>
+    <string name="error_nama_kosong">Nama perjalanan wajib diisi</string>
+    <string name="error_tujuan_kosong">Tujuan wajib diisi</string>
+
+    <!-- Dialog izin lokasi -->
+    <string name="izin_rasional_judul">Izin lokasi diperlukan</string>
+    <string name="izin_rasional_pesan">TemenPulang memerlukan izin lokasi untuk menampilkan posisi perangkatmu selama perjalanan. Tanpa izin ini, perjalanan tidak dapat dimulai.</string>
+    <string name="izin_ditolak_judul">Izin lokasi ditolak</string>
+    <string name="izin_ditolak_pesan">Perjalanan tidak bisa dimulai tanpa izin lokasi. Kamu dapat mengaktifkannya lewat Pengaturan aplikasi.</string>
+    <string name="izin_button_lanjut">Lanjutkan</string>
+    <string name="izin_button_batal">Batal</string>
+    <string name="izin_button_pengaturan">Buka Pengaturan</string>
+
+    <!-- Tracking -->
+    <string name="tracking_judul">Perjalanan sedang berlangsung</string>
+    <string name="tracking_status_berjalan">Sedang berjalan</string>
+    <string name="tracking_label_lokasi">Lokasi</string>
+    <string name="tracking_lokasi_diperbarui">Lokasi sedang diperbarui...</string>
+    <string name="tracking_lokasi_berhasil">Lokasi berhasil diperoleh</string>
+    <string name="tracking_catatan_versi">Versi sederhana: lokasi diambil saat halaman ini dibuka dan setiap kali tombol \"Perbarui Lokasi\" ditekan. Ini bukan pelacakan real-time yang berjalan terus-menerus.</string>
+    <string name="tracking_button_perbarui">Perbarui Lokasi</string>
+    <string name="tracking_button_selesai">Selesaikan Perjalanan</string>
+    <string name="tracking_error_izin">Izin lokasi belum diberikan, sehingga lokasi tidak dapat diambil.</string>
+    <string name="tracking_error_kosong">Lokasi belum tersedia. Pastikan Layanan Lokasi (GPS) aktif, lalu coba lagi.</string>
+    <string name="tracking_error_gagal">Gagal mengambil lokasi. Periksa pengaturan lokasi perangkat, lalu coba lagi.</string>
+
+    <!-- Detail perjalanan -->
+    <string name="detail_judul">Perjalanan Selesai</string>
+    <string name="detail_tidak_ditemukan">Data perjalanan tidak ditemukan.</string>
+    <string name="detail_catatan_kosong">Tidak ada catatan</string>
+    <string name="label_waktu_mulai">Waktu mulai</string>
+    <string name="label_waktu_selesai">Waktu selesai</string>
+    <string name="label_lokasi_terakhir">Lokasi terakhir</string>
+    <string name="detail_lokasi_format">Lat: %1$s, Long: %2$s</string>
+    <string name="detail_lokasi_tidak_ada">Lokasi tidak tersedia</string>
+    <string name="detail_button_home">Kembali ke Home</string>
+    <string name="detail_button_riwayat">Lihat Riwayat</string>
+
+    <!-- Riwayat -->
+    <string name="riwayat_judul">Riwayat Perjalanan</string>
+    <string name="riwayat_subjudul">Perjalanan yang sudah selesai</string>
+    <string name="riwayat_kosong">Belum ada riwayat perjalanan.\nSelesaikan satu perjalanan dan ia akan muncul di sini.</string>
+
+    <!-- Profil -->
+    <string name="profil_judul">Profil</string>
+    <string name="profil_nama">TemanPulang User</string>
+    <string name="profil_email">user@example.com</string>
+    <string name="profil_catatan_dummy">Data pengguna di halaman ini hanya contoh (dummy). Aplikasi ini belum memiliki fitur login.</string>
+    <string name="profil_section_info">Informasi Pengguna</string>
+    <string name="profil_label_nama">Nama</string>
+    <string name="profil_label_email">Email</string>
+    <string name="profil_label_akun">Jenis akun</string>
+    <string name="profil_akun_nilai">Contoh (tanpa login)</string>
+    <string name="profil_section_pengaturan">Pengaturan</string>
+    <string name="profil_notifikasi">Notifikasi</string>
+    <string name="profil_notifikasi_nilai">Belum tersedia</string>
+    <string name="profil_bahasa">Bahasa</string>
+    <string name="profil_bahasa_nilai">Indonesia</string>
+    <string name="profil_section_tentang">Tentang Aplikasi</string>
+    <string name="profil_tentang_versi">Versi 1.0</string>
+    <string name="profil_tentang_deskripsi">TemenPulang adalah project pembelajaran Pemrograman Mobile untuk mempraktikkan Fragment dan Navigation Component. Aplikasi ini bukan aplikasi keamanan profesional.</string>
+</resources>
+```

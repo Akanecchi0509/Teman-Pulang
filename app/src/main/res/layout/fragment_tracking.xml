@@ -1,0 +1,170 @@
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tracking_judul"
+            android:textAppearance="@style/TextAppearance.TemenPulang.Headline" />
+
+        <!-- Kartu info perjalanan -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.TemenPulang.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_nama_perjalanan"
+                    android:textAppearance="@style/TextAppearance.TemenPulang.Label" />
+
+                <TextView
+                    android:id="@+id/text_nama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="16dp"
+                    android:textAppearance="@style/TextAppearance.TemenPulang.Title" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_tujuan"
+                    android:textAppearance="@style/TextAppearance.TemenPulang.Label" />
+
+                <TextView
+                    android:id="@+id/text_tujuan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="16dp"
+                    android:textAppearance="@style/TextAppearance.TemenPulang.Value" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_status"
+                    android:textAppearance="@style/TextAppearance.TemenPulang.Label" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/bg_status_berjalan"
+                    android:paddingStart="12dp"
+                    android:paddingTop="4dp"
+                    android:paddingEnd="12dp"
+                    android:paddingBottom="4dp"
+                    android:text="@string/tracking_status_berjalan"
+                    android:textColor="@color/tp_warning"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Kartu lokasi -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.TemenPulang.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tracking_label_lokasi"
+                    android:textAppearance="@style/TextAppearance.TemenPulang.Label" />
+
+                <TextView
+                    android:id="@+id/text_lokasi_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/tracking_lokasi_diperbarui"
+                    android:textAppearance="@style/TextAppearance.TemenPulang.Value" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_latitude"
+                    android:textAppearance="@style/TextAppearance.TemenPulang.Label" />
+
+                <TextView
+                    android:id="@+id/text_latitude"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/nilai_kosong"
+                    android:textAppearance="@style/TextAppearance.TemenPulang.Title" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_longitude"
+                    android:textAppearance="@style/TextAppearance.TemenPulang.Label" />
+
+                <TextView
+                    android:id="@+id/text_longitude"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/nilai_kosong"
+                    android:textAppearance="@style/TextAppearance.TemenPulang.Title" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Penjelasan jujur tentang keterbatasan fitur lokasi -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/tracking_catatan_versi"
+            android:textAppearance="@style/TextAppearance.TemenPulang.Label" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_perbarui_lokasi"
+            style="@style/Widget.TemenPulang.Button.Outlined"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/tracking_button_perbarui" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_selesai"
+            style="@style/Widget.TemenPulang.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/tracking_button_selesai" />
+
+    </LinearLayout>
+</ScrollView>
+```
